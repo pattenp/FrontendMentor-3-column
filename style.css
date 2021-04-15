@@ -38,7 +38,7 @@ body {
   border: none;
   padding: 1rem 2.5rem;
   background-color: var(--very-light-gray);
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 .card {
@@ -76,15 +76,45 @@ body {
   background-color: var(--very-dark-cyan);
 }
 
-@media only screen and (min-width: 768px) {
+.card:first-of-type {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.card:last-of-type {
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 0rem;
+  border-bottom-left-radius: 1rem;
+}
+
+@media only screen and (min-width: 1450px) {
+  body {
+    width: 100vw;
+  }
+
   .wrapper {
     flex-direction: row;
-    width: 75%;
-    justify-content: center;
-    align-items: center;
+    width: 50%;
+    place-content: center;
+    margin: auto;
   }
 
   .card {
-    flex: 1 1 33%;
+  }
+
+  .card p {
+    height: 180px;
+  }
+
+  .card:first-of-type {
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 1rem;
+  }
+
+  .card:last-of-type {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
   }
 }
