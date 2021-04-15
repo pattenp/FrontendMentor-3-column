@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  color: var(--transparent-white);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.btn {
+  font-weight: bold;
+  border-radius: 75px;
+  border: none;
+  padding: 1rem 2.5rem;
+  background-color: var(--very-light-gray);
+  margin: 2rem;
+}
+
+.card {
+  padding: 2.5rem 2.5rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+.txt-bright-orange {
+  color: var(--bright-orange);
+}
+
+.bg-bright-orange {
+  background-color: var(--bright-orange);
+}
+
+.txt-dark-cyan {
+  color: var(--dark-cyan);
+}
+
+.bg-dark-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.txt-very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+.bg-very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 33%;
+  }
+}
